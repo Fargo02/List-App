@@ -6,12 +6,12 @@ import com.example.listapp.home.presentation.HomeRouter
 import kotlinx.serialization.Serializable
 
 @Serializable
-data object HomeScreen
+data object Home
 
 fun NavGraphBuilder.homeScreen(
     navigateToDetails: (url: String) -> Unit
 ) {
-    composable<HomeScreen> {
+    composable<Home> {
         HomeRouter(navigateToDetails = navigateToDetails)
     }
 }

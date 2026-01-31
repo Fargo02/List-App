@@ -6,7 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.example.listapp.details.presentation.navigation.detailsScreen
 import com.example.listapp.details.presentation.navigation.navigateToDetails
-import com.example.listapp.home.presentation.navigation.HomeScreen
+import com.example.listapp.home.presentation.navigation.Home
 import com.example.listapp.home.presentation.navigation.homeScreen
 
 @Composable
@@ -15,7 +15,7 @@ fun Navigation() {
 
     NavHost(
         navController = navController,
-        startDestination = HomeScreen,
+        startDestination = Home,
     ) {
         homeScreen(navigateToDetails = { navController.navigateToDetails() })
 
