@@ -17,7 +17,7 @@ fun Navigation() {
         navController = navController,
         startDestination = Home,
     ) {
-        homeScreen(navigateToDetails = { navController.navigateToDetails() })
+        homeScreen(navigateToDetails = { navController.navigateToDetails(it) })
 
         detailsScreen(navigateBack = { navController.popBackStack() })
     }

@@ -7,10 +7,10 @@ import com.example.listapp.details.presentation.DetailsRouter
 import kotlinx.serialization.Serializable
 
 @Serializable
-data object DetailsScreen
+data class DetailsScreen(val packageName: String)
 
-fun NavController.navigateToDetails() {
-    navigate(DetailsScreen) {
+fun NavController.navigateToDetails(packageName: String) {
+    navigate(DetailsScreen(packageName)) {
         launchSingleTop = true
     }
 }

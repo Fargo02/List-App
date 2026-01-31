@@ -8,7 +8,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
 @Composable
 fun HomeRouter(
-    navigateToDetails: (url: String) -> Unit,
+    navigateToDetails: (packageName: String) -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = hiltViewModel<HomeViewModel>()
 ) {

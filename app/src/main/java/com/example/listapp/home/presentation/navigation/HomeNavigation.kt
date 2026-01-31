@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 data object Home
 
 fun NavGraphBuilder.homeScreen(
-    navigateToDetails: (url: String) -> Unit
+    navigateToDetails: (packageName: String) -> Unit
 ) {
     composable<Home> {
         HomeRouter(navigateToDetails = navigateToDetails)
