@@ -1,4 +1,4 @@
-package com.example.listapp.core.domain.usecase.api
+package com.example.listapp.details.domain.usecase.api
 
 import com.example.listapp.core.domain.model.InstalledApp
 

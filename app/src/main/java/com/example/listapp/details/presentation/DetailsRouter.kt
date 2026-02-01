@@ -17,6 +17,7 @@ fun DetailsRouter(
     DetailsScreen(
         modifier = modifier,
         uiState = uiState,
+        onAction = viewModel::actionHandler,
         navigateBack = navigateBack
     )
 }

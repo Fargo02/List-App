@@ -26,11 +26,6 @@ class AppsRepositoryImpl @Inject constructor(
 
                 InstalledApp(
                     name = pm.getApplicationLabel(appInfo).toString(),
-                    versionName = resolveInfo.activityInfo
-                        .applicationInfo
-                        .let {
-                            pm.getPackageInfo(it.packageName, 0).versionName ?: ""
-                        },
                     packageName = appInfo.packageName,
                     icon = pm.getApplicationIcon(appInfo)
                 )
@@ -51,7 +46,8 @@ class AppsRepositoryImpl @Inject constructor(
                 name = pm.getApplicationLabel(appInfo).toString(),
                 versionName = packageInfo.versionName ?: "",
                 packageName = packageName,
-                icon = pm.getApplicationIcon(appInfo)
+                icon = pm.getApplicationIcon(appInfo),
+                apkPath = appInfo.sourceDir
             )
         }.getOrNull()
     }

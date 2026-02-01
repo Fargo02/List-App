@@ -5,8 +5,9 @@ import android.graphics.drawable.Drawable
 data class InstalledApp(
     val name: String,
     val packageName: String,
-    val versionName: String,
-    val icon: Drawable?
+    val versionName: String = "",
+    val apkPath: String = "",
+    val icon: Drawable? = null
 ) {
     companion object {
         fun empty() = InstalledApp(

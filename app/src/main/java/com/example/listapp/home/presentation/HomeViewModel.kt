@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val getAppsInfoUseCase: GetAppsInfoUseCase
+    private val getAppsInfoUseCase: GetAppsInfoUseCase,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(HomeState())
